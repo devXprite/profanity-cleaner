@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-const { clean, isProfane } = require('../src/index');
+const { clean, isProfane } = require('../dist/profanity-cleaner');
 
 describe('clean', function () {
     it('Should be a function', function () {

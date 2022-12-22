@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        "badwords-filter" : path.resolve(__dirname, 'src/index.js'),
-        "badwords-filter.min" : path.resolve(__dirname, 'src/index.js')
+        "profanity-cleaner" : path.resolve(__dirname, 'src/index.js'),
+        "profanity-cleaner.min" : path.resolve(__dirname, 'src/index.js')
     },
     devtool: "source-map",
     output: {
@@ -11,7 +11,7 @@ module.exports = {
         filename: '[name].js',
         globalObject: 'this',
         library: {
-            name: 'badwordsFilter',
+            name: 'profanityCleaner',
             type: 'umd',
         },
     },

@@ -1,1 +1,1 @@
-## badwords-filter
+## profanity-cleaner

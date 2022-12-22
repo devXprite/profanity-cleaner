@@ -1,5 +1,5 @@
 {
-  "name": "badwords-filter",
+  "name": "profanity-cleaner",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
