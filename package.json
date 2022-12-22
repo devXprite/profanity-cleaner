@@ -2,7 +2,7 @@
   "name": "profanity-cleaner",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/profanity-cleaner.js",
   "type": "commonjs",
   "author": {
     "name": "DevXprite",
