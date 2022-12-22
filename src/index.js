@@ -16,27 +16,13 @@ const defaultBadWords = require('./badWords.json');
  * @param {boolean} [options.includePunctuation=false] - Whether to keep the punctuation at the beginning and end of the bad words while censoring.
  * @param {number} [options.minimumWordLength=1] - The minimum length of a word that should be censored.
  * @param {function} [options.customMatch=null] - A custom function to decide which words should be censored. The function should take in a single argument (the bad word) and return a boolean value indicating whether the word should be censored.
- * @param {boolean} [options.allowOverlap=true] - Whether to allow overlapping words to be censored.
  * @param {string[]} [options.customBadWords=[]] - An array of additional bad words to censor.
  * @returns {string} The censored text.
  *
  * @example
  *
- * const censoredText = clean('This text contains bad words.', {
- *   placeholder: '*',
- *   caseSensitive: false,
- *   wholeWordsOnly: true,
- *   exceptions: ['bad'],
- *   keepFirstAndLastChar: false,
- *   customReplacement: null,
- *   replacePartialWords: false,
- *   includePunctuation: false,
- *   minimumWordLength: 1,
- *   customMatch: null,
- *   allowOverlap: true,
- *   customBadWords: ['words']
- * });
- * console.log(censoredText); // Output: "This text contains ***."
+ * const cleanText = clean('This fucking example.');
+ * console.log(cleanText); // Output: "This ******* example."
  */
 
 function clean(text, options = {}) {
@@ -52,7 +38,6 @@ function clean(text, options = {}) {
     includePunctuation: false,
     minimumWordLength: 1,
     customMatch: null,
-    allowOverlap: true,
     customBadWords: [],
   };
 
@@ -61,7 +46,9 @@ function clean(text, options = {}) {
     ...options,
   };
 
-  const censoredWords = defaultBadWords.map((word) => word.replace(/\*/g, '\\w+'));
+  const censoredWords = [...defaultBadWords, ...option.customBadWords ].map((word) => word.replace(/\*/g, '\\w+'));
+
+  // console.log(censoredWords);
 
   // Create a regular expression based on the options
   let regex = new RegExp(censoredWords.join('|'), 'g');
@@ -74,9 +61,6 @@ function clean(text, options = {}) {
   }
   if (option.replacePartialWords) {
     regex = new RegExp(censoredWords.join('|'), 'gi');
-  }
-  if (!option.allowOverlap) {
-    regex = new RegExp(`\\b(${censoredWords.join('|')})\\b`, 'gi');
   }
 
   // console.log(regex);
