@@ -1,8 +1,8 @@
 {
-  "name": "profanity-cleaner",
-  "version": "0.0.2",
+  "name": "clean-text",
+  "version": "0.0.1",
   "description": "",
-  "main": "dist/profanity-cleaner.js",
+  "main": "dist/clean-text.js",
   "type": "commonjs",
   "author": {
     "name": "DevXprite",

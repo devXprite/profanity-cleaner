@@ -1,1 +1,1 @@
-## profanity-cleaner
+## clean-text
