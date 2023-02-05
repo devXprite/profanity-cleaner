@@ -1,6 +1,6 @@
 {
   "name": "profanity-cleaner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple and lightweight JavaScript library that helps you clean profane or inappropriate words from a given text",
   "main": "dist/profanity-cleaner.js",
   "type": "commonjs",
@@ -22,7 +22,13 @@
     "lint:fix": "eslint . --fix"
   },
   "keywords": [
-    "profanity", "badwords", "bad-words", "badwords-filter", "profanity-cleaner", "profanity-filter", "profanity-cleaner"
+    "profanity",
+    "badwords",
+    "bad-words",
+    "badwords-filter",
+    "profanity-cleaner",
+    "profanity-filter",
+    "profanity-cleaner"
   ],
   "devDependencies": {
     "@babel/cli": "^7.19.3",
