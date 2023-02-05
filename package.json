@@ -1,14 +1,19 @@
 {
-  "name": "clean-text",
+  "name": "profanity-cleaner",
   "version": "0.0.1",
-  "description": "",
-  "main": "dist/clean-text.js",
+  "description": "A simple and lightweight JavaScript library that helps you clean profane or inappropriate words from a given text",
+  "main": "dist/profanity-cleaner.js",
   "type": "commonjs",
+  "license": "MIT",
   "author": {
-    "name": "DevXprite",
+    "name": "Prateek Singh",
     "email": "devXprite@gmail.com"
   },
-  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devXprite/profanity-cleaner.git"
+  },
+  "homepage": "https://github.com/devXprite/profanity-cleaner",
   "scripts": {
     "test": "mocha",
     "build": "webpack",
@@ -16,7 +21,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
+  "keywords": [
+    "profanity", "badwords", "bad-words", "badwords-filter", "profanity-cleaner", "profanity-filter", "profanity-cleaner"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.5",

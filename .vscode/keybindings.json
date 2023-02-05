@@ -1,0 +1,5 @@
+{
+    "key": "tab",
+    "command": "markdown.extension.onTabKey",
+    "when": "editorTextFocus && !inlineSuggestionVisible && markdown.extension.editor.cursor.inList && !editorHasMultipleSelections && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !inlineSuggestionVisible && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
+}

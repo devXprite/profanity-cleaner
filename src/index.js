@@ -21,8 +21,8 @@ const defaultBadWords = require('./badWords.json');
  *
  * @example
  *
- * const cleanText = clean('This fucking example.');
- * console.log(cleanText); // Output: "This ******* example."
+ * const profanityCleaner = clean('This is a fucking example.');
+ * console.log(profanityCleaner); // Output: "This is a ******* example."
  */
 
 function clean(text, options = {}) {
@@ -92,11 +92,6 @@ function clean(text, options = {}) {
       return `${match[0]}${option.placeholder.repeat(match.length - 2)}${match[match.length - 1]}`;
     }
 
-    // Keep a certain number of characters at the beginning and end of the word
-    // if (options.keepMaxChars > 0) {
-    //     const numCharsToKeep = Math.min(options.keepMaxChars, match.length);
-    //     return `${match.substring(0, numCharsToKeep)}${options.placeholder.repeat(match.length - (numCharsToKeep * 2))}${match.substring(match.length - numCharsToKeep)}`;
-    // }
 
     // Censor the entire word
     let censoredWord = option.placeholder.repeat(match.length);
