@@ -1,6 +1,6 @@
 {
   "name": "profanity-cleaner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple and lightweight JavaScript library that helps you clean profane or inappropriate words from a given text",
   "main": "dist/profanity-cleaner.js",
   "type": "commonjs",
